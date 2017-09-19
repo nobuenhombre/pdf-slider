@@ -1,5 +1,8 @@
 <?php
 
+set_time_limit(0);
+ini_set('memory_limit', 134217728);
+
 define('APP_NAME', 'PDF Converter to HTML Slider');
 // comment out the following two lines when deployed to production
 defined('YII_DEBUG') or define('YII_DEBUG', true);

@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\components\PdfConverter;
 use app\models\UploadForm;
 use Yii;
 use yii\base\DynamicModel;

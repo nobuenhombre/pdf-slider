@@ -2,6 +2,7 @@
 
 namespace app\models;
 
+use app\components\PdfConverter;
 use yii\base\Model;
 use yii\web\UploadedFile;
 
@@ -24,7 +25,10 @@ class UploadForm extends Model
     public function upload()
     {
         if ($this->validate()) {
-            $this->pdfFile->saveAs(__DIR__ . '/../data/uploads/' . $this->pdfFile->baseName . '.' . $this->pdfFile->extension);
+            $file_name = __DIR__ . '/../data/uploads/' . $this->pdfFile->baseName . '.' . $this->pdfFile->extension;
+            $this->pdfFile->saveAs($file_name);
+            $pdf_converter = new PdfConverter($file_name);
+            $pdf_converter->convert();
             return true;
         } else {
             return false;
