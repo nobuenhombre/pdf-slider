@@ -8,9 +8,14 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
+        'NativeRedis' => [
+            'class' => 'app\components\NativeRedis',
+            'host' => 'localhost',
+            'port' => 6379,
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '9LwDqYPmAC2H3HF-dFtEusz9z2sL_jhU',
+            'cookieValidationKey' => '9Mh6FYPmAC2H3HF-dFtER87Nz2sL_jhU',
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -39,14 +44,18 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'index'=>'site/index',
+                'progress'=>'site/progress',
+                'convert'=>'site/convert',
+                'slider'=>'site/slider',
             ],
         ],
-        */
+
     ],
     'params' => $params,
 ];
