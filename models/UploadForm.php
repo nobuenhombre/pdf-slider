@@ -2,11 +2,17 @@
 
 namespace app\models;
 
-use app\components\PdfConverter;
 use app\components\SliderStore;
 use yii\base\Model;
 use yii\web\UploadedFile;
 
+/**
+ * Class UploadForm
+ *
+ * Модель загрузки файла PDF
+ *
+ * @package app\models
+ */
 class UploadForm extends Model
 {
     /**

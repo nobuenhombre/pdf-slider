@@ -2,6 +2,8 @@
 
 set_time_limit(0);
 ini_set('memory_limit', 134217728);
+ini_set('post_max_size', '50M');
+ini_set('upload_max_filesize', '50M');
 
 define('APP_NAME', 'PDF Converter to HTML Slider');
 // comment out the following two lines when deployed to production

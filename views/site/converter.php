@@ -6,8 +6,6 @@
  */
 
 use yii\bootstrap\Progress;
-use yii\helpers\Html;
-use yii\widgets\ActiveForm;
 
 $this->title = 'Convert File :: '.APP_NAME;
 ?>
@@ -17,5 +15,6 @@ $this->title = 'Convert File :: '.APP_NAME;
         'options' => ['id'=>'ProgressBar','data-id' => $model->id]
     ]);
     ?>
-    <div id="ProgressLabel"></div>
+    <div id="ProgressLabel" class="my-icon my-icon-loading"></div>
+    <div id="MessagesConsole"></div>
 </div>
