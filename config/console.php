@@ -9,6 +9,11 @@ $config = [
     'bootstrap' => ['log'],
     'controllerNamespace' => 'app\commands',
     'components' => [
+        'NativeRedis' => [
+            'class' => 'app\components\NativeRedis',
+            'host' => 'localhost',
+            'port' => 6379,
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],

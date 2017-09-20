@@ -39,9 +39,11 @@ function Converter() {
     this.render_progress = function() {
         this.progressBarScale.css('width', this.progress + '%');
         this.progressBarLabel.text(this.progress + '% complete');
-        if (this.status == 'success') {
+        if ((this.status == 'success')||(this.status == 'error')) {
             clearInterval(this.timer.draw_progress);
-            window.location.href = '/slider?id='+this.id;
+            if (this.status == 'success') {
+                window.location.href = '/slider?id=' + this.id;
+            }
         }
     };
 

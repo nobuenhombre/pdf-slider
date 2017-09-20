@@ -9,6 +9,7 @@
 $this->title = 'Slider :: '.APP_NAME;
 ?>
 <div class="site-index">
+    <a href="http://pdf-slider/zips/<?=$id?>.zip">Download Link</a>
     <ul class="rslides" id="slider">
         <?php
             for($i=0; $i<$qty; $i++) {

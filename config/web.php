@@ -53,6 +53,9 @@ $config = [
                 'progress'=>'site/progress',
                 'convert'=>'site/convert',
                 'slider'=>'site/slider',
+
+                '<controller:\w+>' => '<controller>',
+                '<controller:\w+>/<action:[\w-]+>' => '<controller>/<action>',
             ],
         ],
 

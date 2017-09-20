@@ -9,11 +9,11 @@ class SliderAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/slider.css',
+        'assets/slider/css/slider.css',
     ];
     public $js = [
-        'js/jquery.js',
-        'js/slider.js'
+        'assets/slider/js/jquery.js',
+        'assets/slider/js/slider.js'
     ];
     public $depends = [
     ];
