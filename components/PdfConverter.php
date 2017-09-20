@@ -99,7 +99,7 @@ class PdfConverter {
 
                 SliderStore::add_message($this->id, "Read PDF ...");
                 $this->pages_count = $this->imagick->getNumberImages();
-                if ($this->pages_count > 300) {
+                if ($this->pages_count > 20) {
                     throw new \Exception("Сработало ограничение - В Файле более 20 страниц!", 2);
                 }
                 SliderStore::create($this->id, $this->pages_count);
