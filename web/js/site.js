@@ -3,6 +3,7 @@ function Converter() {
     this.progress = 0;
     this.status = '';
     this.message = '';
+    this.finish = false;
     this.progressBar = null;
     this.messagesConsole = null;
     this.progressBarScale = null;
@@ -45,7 +46,8 @@ function Converter() {
         if (this.message.length > 0) {
             this.messagesConsole.prepend(this.message + '<hr />');
         }
-        if ((this.status == 'success')||(this.status == 'error')) {
+        if ((this.finish == false)&&((this.status == 'success')||(this.status == 'error'))) {
+            this.finish = true;
             clearInterval(this.timer.draw_progress);
             if (this.status == 'success') {
                 this.progressBarLabel.removeClass("my-icon-loading");
